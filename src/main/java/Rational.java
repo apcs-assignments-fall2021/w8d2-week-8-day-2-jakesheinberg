@@ -33,7 +33,7 @@ public class Rational {
         int top = (a*d) + (b*c);
         int bottom = b*d;
         Rational jake = new Rational(top,bottom);
-        return jake;
+        return simplify(jake);
     }
 
     // This method takes two Rationals, subtracts thems up, 
@@ -46,15 +46,15 @@ public class Rational {
         int top = (a*d) - (b*c);
         int bottom = b*d;
         Rational jake = new Rational(top,bottom);
-        return jake;
+        return simplify(jake);
     }
     
     public static Rational multiply(Rational r, Rational s) {
-        return(new Rational(r.numerator * s.numerator, r.denominator*s.denominator));
+        return(simplify(new Rational(r.numerator * s.numerator, r.denominator*s.denominator)));
     }
     
     public static Rational divide(Rational r, Rational s) {
-        return(multiply( r, new Rational(r.denominator, r.numerator)));
+        return(simplify(multiply( r, new Rational(r.denominator, r.numerator))));
     }
 
     // Finds the greatest common factor between a and b
@@ -71,7 +71,7 @@ public class Rational {
             }else{
                 y=y-1;
             }
-        }return ans;
+        }return(ans);
     }
 
     // This method is given a rational, and returns a simplified version

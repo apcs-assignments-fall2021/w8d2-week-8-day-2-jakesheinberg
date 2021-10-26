@@ -14,8 +14,11 @@ public class RationalClient {
 //        System.out.println(s); // 1/3
 //        Rational t = Rational.add(r, s);
 //        System.out.println(t); // 5/6
-        System.out.println(Rational.simplify(new Rational(10,20)));
-//
+        System.out.println(Rational.simplify(new Rational(5,20)));
+        System.out.println(Rational.add(new Rational(10,20), new Rational (13,20)));
+        System.out.println(Rational.subtract(new Rational(10,20), new Rational (7,20)));
+        System.out.println(Rational.multiply(new Rational(1,2), new Rational (2,3)));
+        System.out.println(Rational.divide(new Rational(10,20), new Rational (1,2)));
 //        // A more advanced test for adding Rational that won't work
 //        // until the greatestCommonFactor and simplify methods work
 //        Rational x = new Rational(1, 6);
